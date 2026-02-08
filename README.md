@@ -1,22 +1,32 @@
-## RNNS RNNs to Transformers: A Technical Evolution Survey
-A comprehensive, mathematically rigorous survey and implementation guide exploring the transition from sequential recurrence to parallelized self-attention.
+# RNNs to Transformers: From Recurrence to Attention
 
-## Objective
-To provide a deep-dive architectural reference for sequence modeling, bridging the gap between foundational Recurrent Neural Networks (RNNs) and modern Large Language Models (LLMs). This project serves as both a theoretical framework and a practical implementation guide for engineers and researchers.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 
-## Technical Highlights
- 1. **The Sequential Challenge & FoundationsVanishing Gradient Analysis:** A rigorous mathematical look at the Jacobian of hidden-state transitions and why standard BPTT fails over long sequences.
-    
- 2. **State Management:** Understanding the necessity of internal "memory" in feedforward-resistant temporal data.
-  
- 3 **Advanced Recurrent ArchitecturesLSTM**
-      **(Long Short-Term Memory):** Detailed breakdown of the "Constant Error Carousel" and additive gating mechanisms.
-       **GRU (Gated Recurrent Units):** Analysis of parameter efficiency through Reset and Update gates.
-   ## Tech Stack
-**Deep Learning Framework:** PyTorch (CharRNN and CharLSTM implementations).
+**A pedagogical deep dive into the evolution of sequence models — from vanilla RNNs, through LSTMs, to the Transformer architecture.**
 
-**Documentation Engine:** Docusaurus 3.0.
+This repository contains a self-contained tutorial (with math, NumPy code, and explanations) that walks through why RNNs were revolutionary, why they struggle with long dependencies (vanishing gradients, fixed hidden-state bottleneck), how LSTMs helped, and why attention + self-attention (Transformers) ultimately took over in modern NLP and sequence modeling.
 
-**Math Rendering:** KaTeX / LaTeX.
+**Status:** Work in progress — core RNN + BPTT is solid; Transformer/attention sections are being expanded.
 
-**Visualizations:** Mermaid.js.
+## 📖 What You'll Find Here
+
+- Detailed mathematical derivations
+  - RNN forward pass & recurrence
+  - Backpropagation Through Time (BPTT) with recursive gradients
+  - Vanishing & exploding gradient problems
+- Clean NumPy implementation of a character-level RNN (forward pass + loss)
+- Conceptual explanations (hidden-state bottleneck, teacher forcing vs autoregressive generation, etc.)
+- Upcoming: LSTM gates & cell state, full self-attention (QKV, scaled dot-product), positional encodings, parallelism advantages, and RNN vs Transformer comparison table
+
+Perfect for:
+- ML students/intermediates wanting to understand **why** Transformers replaced RNNs
+- People implementing sequence models from scratch
+- Preparing for interviews (RNN limitations, attention mechanism)
+
+## 🚀 Quick Start
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/rnns-to-transformers.git
+   cd rnns-to-transformers
