@@ -1,3 +1,8 @@
+---
+slug: /
+---cd
+
+
 ****# From RNNs to Transformers: The Technical Evolution of Sequence Models
 
 ## Abstract

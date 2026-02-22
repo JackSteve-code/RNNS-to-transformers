@@ -4,11 +4,10 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RNNs to Transformers',
-  tagline: 'A Deep Learning Journey',
+  title: 'JACK.SYSTEMS',
+  tagline: 'Software and ML Engineer specializing in AI/ML infrastructure',
   favicon: 'img/favicon.ico',
 
-  // GitHub Pages Deployment Config
   url: 'https://JackSteve-code.github.io',
   baseUrl: '/RNNS-to-transformers/', 
   organizationName: 'JackSteve-code', 
@@ -16,7 +15,7 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -37,12 +36,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          routeBasePath: '/', 
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false, 
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -63,51 +61,27 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       mermaid: {
-        theme: {
-          light: 'neutral',
-          dark: 'forest',
-        },
+        theme: { light: 'neutral', dark: 'forest' },
       },
-      tableOfContents: {
-        minHeadingLevel: 2,
-        maxHeadingLevel: 5,
-      },
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'RNNs to Transformers',
+        title: 'JACK.SYSTEMS',
         logo: {
-          alt: 'Site Logo',
+          alt: '',
           src: 'img/logo.svg',
+          style: { display: 'none' }, // Hides the dinosaur logo
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Project Phases',
-          },
-          {to: '/blog', label: 'Updates', position: 'left'},
-          {
             href: 'https://github.com/JackSteve-code/RNNS-to-transformers',
-            label: 'GitHub',
+            label: 'Source Code',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Content',
-            items: [
-              {
-                label: 'Start Learning',
-                to: '/docs/intro',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} JackSteve-code. Built with Docusaurus.`,
+        style: 'light',
+        links: [],
+        copyright: `© ${new Date().getFullYear()} Jack Steve | AI/ML Infrastructure Expert`,
       },
       prism: {
         theme: prismThemes.github,
